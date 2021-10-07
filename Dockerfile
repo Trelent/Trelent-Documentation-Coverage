@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+LABEL maintainer="Trelent Inc."
+
 WORKDIR /action
 
 RUN apt-get update && apt-get install python3 python3-pip python3-pygit2 -y

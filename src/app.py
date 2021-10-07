@@ -16,4 +16,4 @@ for file in python_files:
         docstr_arr.append(python_parser.get_all_function_docstrings())
         docstr_arr.append(python_parser.get_all_method_documentations())
 
-print(docstr_arr)
+print("::set-output name=documented-files::" + str(docstr_arr))

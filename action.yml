@@ -1,0 +1,16 @@
+# action.yml
+name: 'Trelent Documentation Coverage'
+description: 'Check the documentation coverage of your repo's Python code.'
+inputs:
+  source-path:  # Source directory to check
+    description: 'Source Path'
+    required: true
+    default: ''
+outputs:
+  documented-files: # Docstrings found'
+    description: 'The docstrings found in files within the given source directory'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
